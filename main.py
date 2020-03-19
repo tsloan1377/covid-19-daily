@@ -23,6 +23,5 @@ def default_plot():
     return render_template("index.html", plot=my_map)
 
 
-
 if __name__ == "__main__":
     app.run(debug=True)
