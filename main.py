@@ -22,6 +22,5 @@ def default_plot():
     my_map = data.plot_provinces(data.provinces, t_norm=10, exp_fit=True)
     return render_template("index.html", plot=my_map)
 
-
 if __name__ == "__main__":
     app.run(debug=True)
