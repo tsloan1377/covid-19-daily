@@ -14,7 +14,7 @@ app = Flask(__name__)
 app.debug = True
 
 @app.route("/")
-def default():
+def default_plot():
 
     data = Covid()
     data.provinces = [ 'Ontario','Quebec','Alberta', 'British Columbia']
