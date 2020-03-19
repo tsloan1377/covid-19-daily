@@ -23,7 +23,6 @@ class Covid:
 
 
 
-
     def get_country(self,name, combine=False, plot=False):
 
         sub_df = self.df_confirmed.loc[df_confirmed['Country/Region'] ==name]
