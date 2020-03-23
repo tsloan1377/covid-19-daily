@@ -19,7 +19,7 @@ def default_plot():
     data = Covid()
     data.provinces = [ 'Ontario','Quebec','Alberta', 'British Columbia']
 
-    my_map = data.plot_provinces(data.provinces, t_norm=10, exp_fit=True)
+    my_map = data.plot_provinces(data.provinces, t_norm=50, exp_fit=True)
     return render_template("index.html", plot=my_map)
 
 if __name__ == "__main__":

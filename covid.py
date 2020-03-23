@@ -93,14 +93,14 @@ class Covid:
             if t_norm is not None:
 
                 if(exp_fit):
-                    t_range, p,norm = self.est_curve(prov,t_norm,t_max=100)#, no_extrap)
+                    t_range, p,norm = self.est_curve(prov,t_norm,t_max=30)#, no_extrap)
                     plt.plot(norm['t_rel_to_case'], norm['count'],'-',t_range, p(t_range), '--')
 
                     # Plot the 2nd order polynomial fit
                     fig.add_trace(go.Scatter(x=t_range,
                                  y=p(t_range),
                                  mode='lines',
-                                 name=prov + ' est.',
+                                 name=prov + ' expected',
                                  line=dict(color=colors[i],
                                            width=1,#width=line_size[i]),
                                            dash='dash'),
@@ -120,7 +120,7 @@ class Covid:
                                          mode='lines',
                                          name=prov,
                                          line=dict(color=colors[i],
-                                                   width=2),#line_size[i]),
+                                                   width=3),#line_size[i]),
                                          connectgaps=True,
                 ))
 
